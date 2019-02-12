@@ -1,0 +1,9 @@
+version: "2"
+services:
+  erp-dashboard:
+    image: fastai_api
+    environment:
+      TMP_CLASS_PATH: "/opt/api/models/"
+      TMP_CLASS_NAME: "tmp_class"
+      FINE_TUNED_ENC: "/opt/api/models/fine_tuned_enc"
+      FINAL_LAYER_PATH: "/opt/api/models/final"

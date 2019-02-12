@@ -1,0 +1,15 @@
+version: "2"
+services:
+  fastai-api:
+    image: fastai_api
+    ports:
+      - "8080:8080"
+    environment:
+      GOOGLE_SERVICE_ACCOUNT: ${GOOGLE_SERVICE_ACCOUNT}
+      DOWNLOAD_MODELS: "true"
+      FINE_TUNED_ENC: "fine_tuned_enc.pth"
+      FINAL_LAYER_PATH: "final.pth"
+      DATA_CLASS_NAME: "tmp_class"
+      MODELS_PATH: "/opt/api/models/"
+      GOOGLE_PROJECT: "${GOOGLE_PROJECT}"
+      MODELS_BUCKET_PATH: "${MODELS_BUCKET_PATH}"
