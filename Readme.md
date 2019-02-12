@@ -52,5 +52,8 @@ services:
       MODELS_BUCKET_PATH: "${MODELS_BUCKET_PATH}"
 ```
 
+#### Example Command To Run and Test
+```
 docker-compose up
 curl -s -H"Content-Type: application/json" localhost:8080/predict -d '{"message": "I love open source"}'
+```
